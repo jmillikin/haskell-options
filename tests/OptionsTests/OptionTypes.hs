@@ -20,26 +20,27 @@ import           Options
 
 suite_OptionTypes :: Suite
 suite_OptionTypes = suite "option-types"
-	test_Bool
-	test_String
-	test_Int
-	test_Int8
-	test_Int16
-	test_Int32
-	test_Int64
-	test_Word
-	test_Word8
-	test_Word16
-	test_Word32
-	test_Word64
-	test_Integer
-	test_Float
-	test_Double
-	test_Maybe
-	test_List
-	test_Set
-	test_Map
-	test_Enum
+	[ test_Bool
+	, test_String
+	, test_Int
+	, test_Int8
+	, test_Int16
+	, test_Int32
+	, test_Int64
+	, test_Word
+	, test_Word8
+	, test_Word16
+	, test_Word32
+	, test_Word64
+	, test_Integer
+	, test_Float
+	, test_Double
+	, test_Maybe
+	, test_List
+	, test_Set
+	, test_Map
+	, test_Enum
+	]
 
 parseValid :: (Show a, Eq a) => OptionType a -> String -> a -> Assertion
 parseValid t s expected = equal (optionTypeParse t s) (Right expected)

@@ -16,22 +16,23 @@ import           Options.Tokenize
 
 suite_Tokenize :: Suite
 suite_Tokenize = suite "tokenize"
-	test_Empty
-	test_NoFlag
-	test_ShortFlag
-	test_ShortFlagUnknown
-	test_ShortFlagMissing
-	test_ShortFlagUnary
-	test_ShortFlagDuplicate
-	test_LongFlag
-	test_LongFlagUnknown
-	test_LongFlagMissing
-	test_LongFlagUnary
-	test_LongFlagDuplicate
-	test_EndFlags
-	test_Subcommand
-	test_SubcommandUnknown
-	test_Unicode
+	[ test_Empty
+	, test_NoFlag
+	, test_ShortFlag
+	, test_ShortFlagUnknown
+	, test_ShortFlagMissing
+	, test_ShortFlagUnary
+	, test_ShortFlagDuplicate
+	, test_LongFlag
+	, test_LongFlagUnknown
+	, test_LongFlagMissing
+	, test_LongFlagUnary
+	, test_LongFlagDuplicate
+	, test_EndFlags
+	, test_Subcommand
+	, test_SubcommandUnknown
+	, test_Unicode
+	]
 
 commandDefs :: OptionDefinitions
 commandDefs = OptionDefinitions

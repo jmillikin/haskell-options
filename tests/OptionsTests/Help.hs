@@ -15,25 +15,27 @@ import           Options.Tokenize
 import           Options.Types
 
 suite_Help :: Suite
-suite_Help = suite "help"
-	suite_AddHelpFlags
-	test_CheckHelpFlag
-	test_ShowHelpSummary
-	test_ShowHelpSummary_Subcommand
-	test_ShowHelpAll
-	test_ShowHelpAll_Subcommand
-	test_ShowHelpGroup
-	test_ShowHelpGroup_Subcommand
-	test_ShowHelpGroup_SubcommandInvalid
+suite_Help = suite "help" $
+	suiteTests suite_AddHelpFlags ++
+	[ test_CheckHelpFlag
+	, test_ShowHelpSummary
+	, test_ShowHelpSummary_Subcommand
+	, test_ShowHelpAll
+	, test_ShowHelpAll_Subcommand
+	, test_ShowHelpGroup
+	, test_ShowHelpGroup_Subcommand
+	, test_ShowHelpGroup_SubcommandInvalid
+	]
 
 suite_AddHelpFlags :: Suite
 suite_AddHelpFlags = suite "addHelpFlags"
-	test_AddHelpFlags_None
-	test_AddHelpFlags_Short
-	test_AddHelpFlags_Long
-	test_AddHelpFlags_Both
-	test_AddHelpFlags_NoAll
-	test_AddHelpFlags_Subcommand
+	[ test_AddHelpFlags_None
+	, test_AddHelpFlags_Short
+	, test_AddHelpFlags_Long
+	, test_AddHelpFlags_Both
+	, test_AddHelpFlags_NoAll
+	, test_AddHelpFlags_Subcommand
+	]
 
 groupHelp :: Maybe Group
 groupHelp = Just (Group

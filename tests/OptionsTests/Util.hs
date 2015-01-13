@@ -27,13 +27,14 @@ import           Options.Util
 
 suite_Util :: Suite
 suite_Util = suite "util"
-	test_ValidFieldName
-	test_ValidShortFlag
-	test_ValidLongFlag
-	test_HasDuplicates
+	[ test_ValidFieldName
+	, test_ValidShortFlag
+	, test_ValidLongFlag
+	, test_HasDuplicates
 #if defined(OPTIONS_ENCODING_UTF8)
-	property "decodeUtf8" prop_DecodeUtf8
+	, property "decodeUtf8" prop_DecodeUtf8
 #endif
+	]
 
 test_ValidFieldName :: Test
 test_ValidFieldName = assertions "validFieldName" $ do

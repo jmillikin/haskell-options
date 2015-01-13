@@ -15,9 +15,10 @@ import           Options
 
 suite_Api :: Suite
 suite_Api = suite "api"
-	test_RepeatedFlags
-	test_CompatibleDuplicateFlags
-	test_ConflictingDuplicateFlags
+	[ test_RepeatedFlags
+	, test_CompatibleDuplicateFlags
+	, test_ConflictingDuplicateFlags
+	]
 
 data RepeatedStringOpts = RepeatedStringOpts [String]
 	deriving (Eq, Show)

@@ -29,10 +29,11 @@ instance Options StringOptions where
 
 suite_StringParsing :: Suite
 suite_StringParsing = suite "string-parsing"
-	test_Defaults
-	test_Ascii
-	test_UnicodeValid
-	test_UnicodeInvalid
+	[ test_Defaults
+	, test_Ascii
+	, test_UnicodeValid
+	, test_UnicodeInvalid
+	]
 
 test_Defaults :: Test
 test_Defaults = assertions "defaults" $ do

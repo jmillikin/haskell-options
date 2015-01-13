@@ -125,7 +125,7 @@ test-suite options_tests
 
   build-depends:
       base >= 4.0 && < 5.0
-    , chell >= 0.3.1 && < 0.4
+    , chell >= 0.4 && < 0.5
     , chell-quickcheck >= 0.2 && < 0.3
     , containers >= 0.1
     , monads-tf >= 0.1
